@@ -55,7 +55,7 @@ const ProductGrid = ({ products, onSelect, resetKey }) => {
           <button
             type="button"
             className={styles.pageButton}
-            onClick={(e) => { e.preventDefault(); setPage((p) => Math.max(1, p - 1)) }}
+            onClick={(e) => { e.preventDefault(); setPage((p) => Math.max(1, p - 1)); window.scrollTo(0, 0); }}
             aria-label="Página anterior"
             disabled={page === 1}
           >
@@ -82,7 +82,7 @@ const ProductGrid = ({ products, onSelect, resetKey }) => {
           <button
             type="button"
             className={styles.pageButton}
-            onClick={(e) => { e.preventDefault(); setPage((p) => Math.min(totalPages, p + 1)) }}
+            onClick={(e) => { e.preventDefault(); setPage((p) => Math.min(totalPages, p + 1)); window.scrollTo(0, 0); }}
             aria-label="Página siguiente"
             disabled={page === totalPages}
           >
