@@ -1,0 +1,45 @@
+.banner {
+  max-width: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, rgba(91, 45, 139, 0.15), rgba(242, 201, 76, 0.1));
+  border: 1px solid rgba(91, 45, 139, 0.3);
+  border-left: 4px solid var(--brand-purple);
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin: 0 2rem 2rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(91, 45, 139, 0.1);
+}
+
+.text {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.link {
+  color: var(--brand-gold);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid var(--brand-gold);
+  transition: all 0.2s ease;
+}
+
+.link:hover {
+  color: var(--brand-purple);
+  border-bottom-color: var(--brand-purple);
+}
+
+@media (max-width: 1126px) {
+  .banner {
+    padding: 10px 16px;
+    margin: 0 1rem 1.5rem 1rem;
+  }
+  
+  .text {
+    font-size: 0.85rem;
+  }
+}

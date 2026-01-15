@@ -1,0 +1,76 @@
+/* Forzar siempre 5 columnas y que ocupen todo el ancho disponible.
+   Cada columna tendrá un ancho mínimo para evitar tarjetas demasiado pequeñas. */
+.grid {
+  display: grid;
+  gap: 12px; /* gap reducido para compactar columnas */
+  padding: 16px 16px 16px 0; /* quitar padding-left para que cartas estén pegadas al borde izquierdo */
+  width: 100%;
+  box-sizing: border-box;
+  /* 5 columnas; min-width aumentado para recuperar tamaño de tarjetas */
+  grid-template-columns: repeat(5, minmax(140px, 1fr));
+  justify-items: stretch; /* la tarjeta ocupa todo el ancho de la celda */
+  align-items: start;
+}
+
+/* En mobile, cambiar a flex para ocupar espacio */
+@media (max-width: 1126px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 16px;
+    align-items: stretch; /* mantener para alinear precios */
+  }
+}
+
+/* En pantallas muy estrechas, flex */
+@media (max-width: 600px) {
+  .grid {
+    padding: 12px;
+    gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+/* aseguramos que los hijos puedan encoger sin provocar overflow */
+.grid > * {
+  min-width: 0;
+}
+
+/* Mantener la paginación centrada */
+.pagination {
+  margin: 16px auto;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}  
+
+.pageButton {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.06);
+  color: var(--text-primary);
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.pageButton:hover {
+  opacity: 0.95;
+}
+
+.pageButtonActive,
+.pageButton[aria-current="page"] {
+  background: var(--brand-purple);
+  color: #fff;
+  border-color: var(--brand-purple);
+}
+
+.ellipsis {
+  padding: 8px 12px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}

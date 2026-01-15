@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap');
+
+:root {
+  /* Tipografía y tokens de marca */
+  font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Paleta de marca */
+  --brand-purple: #5B2D8B;
+  --brand-gold: #F2C94C;
+  --bg-cream: #F7F1E6;
+  --text-dark: #1f1033;
+  --text-muted: #6B5A7F;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #211832;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --text-primary: rgba(255, 255, 255, 0.87);
+  --text-secondary: rgba(255, 255, 255, 0.6);
+  --card-shadow: rgba(0, 0, 0, 0.25);
+}
+
+/* Reglas globales de tipografía y branding */
+h1, h2, h3, h4, h5, button { text-transform: uppercase; letter-spacing: 0.05em; }
+body { font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif; }
+
+/* Estilos para precios (se usarán en componentes con la clase .price) */
+.price {
+  color: var(--brand-purple);
+  font-weight: 700;
+  background: linear-gradient(90deg, rgba(242,201,76,0.08), rgba(91,45,139,0.02));
+  padding: 0.24rem 0.56rem;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* Botones por defecto con la paleta de la marca */
+button {
+  background-color: var(--brand-purple);
+  color: #fff;
+  border: 1px solid transparent;
+}
+button:hover {
+  background-color: var(--brand-gold);
+  color: var(--text-dark);
+}
+
+
+a {
+  font-weight: 500;
+  color: var(--brand-purple);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--brand-gold);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: flex-start; /* alinear al top en lugar de centrar verticalmente */
+  justify-content: center; /* mantener centrado horizontalmente */
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 120ms ease;
+}
+button:hover {
+  border-color: rgba(0,0,0,0.06);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+     --text-primary: #111;
+    --text-secondary: #555;
+    --card-shadow: rgba(0, 0, 0, 0.15);
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+  
+}

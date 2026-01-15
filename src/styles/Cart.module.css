@@ -1,0 +1,117 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+}
+
+.modal {
+  width: min(720px, 95%);
+  max-height: 80vh;
+  overflow: auto;
+  /* Fondo sutil con tono de marca */
+  background: linear-gradient(180deg, rgba(91,45,139,0.95), rgba(17,12,26,0.95));
+  border-radius: 12px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.header {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.close {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 6px 10px;
+  border-radius: 8px;
+  color: var(--text-primary);
+}
+
+.list {
+  display:flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.item {
+  display:flex;
+  gap: 12px;
+  align-items: center;
+}
+.item img { width: 72px; height: 108px; object-fit: cover; border-radius: 8px }
+
+.info { flex: 1 }
+.name { font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+.price { color: var(--brand-purple); font-weight: 700; background: rgba(91,45,139,0.04); padding: 4px 8px; border-radius: 8px; display: inline-block; }
+
+.remove {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 6px 8px;
+  border-radius: 8px;
+  color: var(--text-primary);
+}
+
+.footer { margin-top: 16px; text-align: right }
+.total { font-weight: 700 }
+
+.cartGenerate {
+  background: var(--brand-gold);
+  color: var(--text-dark);
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-left: 12px;
+  cursor: pointer;
+}
+.cartGenerate:hover { background: var(--brand-purple); color: #fff }
+
+.copied { margin-left: 8px; color: var(--text-secondary); font-size: 0.9rem }
+
+/* Controles de cantidad */
+.qty {
+  display:flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 12px;
+}
+
+.qty button {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  line-height: 1;
+  font-size: 16px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.qty input {
+  width: 56px;
+  height: 28px;
+  padding: 0 6px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.06);
+  text-align: center;
+  background: transparent;
+  color: var(--text-primary);
+  box-sizing: border-box;
+}
+
+.lineTotal { margin-left: 12px; font-weight: 700 }
+
+.empty { color: var(--text-secondary); padding: 12px; text-align: center }

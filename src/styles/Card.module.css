@@ -1,0 +1,119 @@
+.card {
+  width: 100%;
+  margin: 0 auto 5%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0; /* permite que el contenido se encoja dentro de la columna */
+}
+
+.imageWrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+@media (max-width: 480px) {
+  .image {
+    aspect-ratio: 2 / 3;
+    width: 100%;
+  }
+  .info {
+    font-size: 0.85rem;
+  }
+}
+
+.imageWrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.info {
+  margin-top: 6px;
+  text-align: center;
+}
+
+.meta {
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: var(--text-secondary);
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+}
+
+.separator {
+  opacity: 0.4;
+}
+
+.price {
+  margin-top: 4px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--brand-gold);
+  background: linear-gradient(90deg, rgba(242,201,76,0.06), rgba(91,45,139,0.02));
+  padding: 4px 8px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* En mobile, ajustar cartas para flex - máximo 5 por fila */
+@media (max-width: 1126px) {
+  .card {
+    height: 100%;
+    flex: 0 1 calc((100% - 48px) / 5); /* máximo 5 cartas: (ancho - 4 gaps de 12px) / 5 */
+    min-width: 0; /* sin mínimo para que se adapte */
+    margin: 0 0 5%; /* quitar auto para evitar centrado individual */
+  }
+  .info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .price {
+    margin-top: 0;
+  }
+}
+
+/* Reducir a 4 cartas por fila cuando la pantalla se hace más pequeña */
+@media (max-width: 900px) {
+  .card {
+    flex: 0 1 calc((100% - 36px) / 4); /* 4 cartas: (ancho - 3 gaps de 12px) / 4 */
+  }
+}
+
+/* Reducir a 3 cartas por fila */
+@media (max-width: 700px) {
+  .card {
+    flex: 0 1 calc((100% - 24px) / 3); /* 3 cartas: (ancho - 2 gaps de 12px) / 3 */
+  }
+}
+
+/* Reducir a 2 cartas por fila */
+@media (max-width: 500px) {
+  .card {
+    flex: 0 1 calc((100% - 12px) / 2); /* 2 cartas: (ancho - 1 gap de 12px) / 2 */
+  }
+}
+
+/* En pantallas muy pequeñas, 1 carta por fila */
+@media (max-width: 350px) {
+  .card {
+    flex: 0 1 100%; /* 1 carta: ocupa todo el ancho */
+  }
+}
