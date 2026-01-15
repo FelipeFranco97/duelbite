@@ -71,7 +71,7 @@ const ProductGrid = ({ products, onSelect, resetKey }) => {
                 type="button"
                 aria-label={`Ir a página ${p}`}
                 className={page === p ? `${styles.pageButton} ${styles.pageButtonActive}` : styles.pageButton}
-                onClick={(e) => { e.preventDefault(); setPage(p) }}
+                onClick={(e) => { e.preventDefault(); setPage(p); window.scrollTo(0, 0); }}
                 aria-current={page === p ? 'page' : undefined}
               >
                 {p}
