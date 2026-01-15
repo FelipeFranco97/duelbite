@@ -50,7 +50,7 @@
 
 .info { flex: 1 }
 .name { font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
-.price { color: var(--brand-purple); font-weight: 700; background: rgba(91,45,139,0.04); padding: 4px 8px; border-radius: 8px; display: inline-block; }
+.price { color: var(--brand-gold); font-weight: 700; background: rgba(91,45,139,0.04); padding: 4px 8px; border-radius: 8px; display: inline-block; }
 
 .remove {
   background: transparent;
