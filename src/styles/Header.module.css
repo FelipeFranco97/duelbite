@@ -2,34 +2,74 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 2rem 0 2rem;
-  margin-bottom: 2rem;
-  position: relative;
+  gap: 10rem; 
+  padding: 1.5rem 2rem;
 }
 
-.logo {
-  max-width: 100%;
+.leftLogoGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90px;
+}
+
+.logoMark {
+  width: 80px;
   height: auto;
-  max-height: 220px;
-  object-fit: contain;
+  margin-bottom: -22px;
+  position: relative;
+  z-index: 2;
+}
+
+.logoText {
+  width: 110px; 
+  height: auto;
+  transform: scale(0.65);
+  margin-top: -10px; 
   position: relative;
   z-index: 1;
-  filter: drop-shadow(0 4px 12px rgba(91, 45, 139, 0.3));
-  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.logo:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 6px 16px rgba(91, 45, 139, 0.4));
+.mainLogo {
+  height: 250px;
+  width: auto;
+  filter: drop-shadow(0 10px 25px rgba(91, 45, 139, 0.45));
+  transition: transform 0.3s ease;
 }
 
-@media (max-width: 1126px) {
+.rightLogo {
+  height: 130px;
+  width: auto;
+}
+
+@media (max-width: 1024px) {
   .header {
-    padding: 0.75rem 1rem 0 1rem;
-    margin-bottom: 1.5rem;
+    gap: 4rem;
   }
-  
-  .logo {
-    max-height: 200px;
+}
+
+@media (max-width: 600px) {
+  .header {
+    gap: 1.5rem;
+    padding: 1rem;
+    justify-content: space-around;
+  }
+
+  .mainLogo {
+    height: 100px;
+  }
+
+  .logoMark {
+    width: 50px;
+    margin-bottom: -12px;
+  }
+
+  .logoText {
+    width: 70px;
+    transform: scale(0.6);
+  }
+
+  .rightLogo {
+    height: 70px;
   }
 }
