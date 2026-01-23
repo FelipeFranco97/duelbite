@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <p className={styles.text}>
-        © {currentYear} Duel & Bite. Todos los derechos reservados.
+        © {currentYear} E-commerce TCG. Todos los derechos reservados.
       </p>
     </footer>
   )

@@ -78,7 +78,7 @@ function App() {
 
   return (
     <>
-      <Header />
+     
       <AdvertisingBanner />
       <div className="layout">
         <aside className="sidebar">
